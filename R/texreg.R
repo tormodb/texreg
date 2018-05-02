@@ -540,22 +540,22 @@ texreg <- function(l, file = NULL, single.row = FALSE,
     snote <- ""
   }
   if (is.null(fontsize)) {
-    notesize <- "scriptsize"
+    notesize <- fontsize
   } else if (fontsize == "tiny" || fontsize == "scriptsize" || 
       fontsize == "footnotesize" || fontsize == "small") {
-    notesize <- "tiny"
+    notesize <- fontsize
   } else if (fontsize == "normalsize") {
-    notesize <- "scriptsize"
-  } else if (fontsize == "large") {
-    notesize <- "footnotesize"
-  } else if (fontsize == "Large") {
-    notesize <- "small"
-  } else if (fontsize == "LARGE") {
     notesize <- "normalsize"
-  } else if (fontsize == "huge") {
+  } else if (fontsize == "large") {
     notesize <- "large"
-  } else if (fontsize == "Huge") {
+  } else if (fontsize == "Large") {
     notesize <- "Large"
+  } else if (fontsize == "LARGE") {
+    notesize <- "LARGE"
+  } else if (fontsize == "huge") {
+    notesize <- "huge"
+  } else if (fontsize == "Huge") {
+    notesize <- "Huge"
   }
   if (is.null(custom.note)) {
     note <- paste0("\\multicolumn{", length(modnames), 
