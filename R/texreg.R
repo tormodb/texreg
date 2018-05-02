@@ -540,7 +540,7 @@ texreg <- function(l, file = NULL, single.row = FALSE,
     snote <- ""
   }
   if (is.null(fontsize)) {
-    notesize <- fontsize
+    notesize <- "normalsize"
   } else if (fontsize == "tiny" || fontsize == "scriptsize" || 
       fontsize == "footnotesize" || fontsize == "small") {
     notesize <- fontsize
